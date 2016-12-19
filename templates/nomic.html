@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Nomic.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='draggy.js') }}"></script>
+<link href='https://fonts.googleapis.com/css?family=Raleway:300|Roboto:400' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Menus Page</title>
+</head>
+
+<body>
+<div id="wrapper">
+<nav>
+	<ul>
+	  <li> <a href="http://degrafft.com">Home</a></li>
+	  <li><a href="http://blog.degrafft.com">Blog</a></li>
+	  <li><a href="./Proposal">Art</a></li>
+	  <li><a href="./about">About</a></li>
+	</ul>
+</nav>
+<h1>Hi, I'm Brendan.</h1>
+<img src="{{url_for('static', filename='icon.png')}}" />
+<div class="content" id='content'>
+	<div class="leftcol">
+		{%for cube in cubesLeft%}
+			<div class="cube" id='leftcube{{ loop.index0 }}'>
+				{{cube}}
+			</div>
+		{% endfor %}
+	</div>
+	<div class="rightcol">
+		{%for cube in cubesRight%}
+			<div class="cube" id='rightcube{{ loop.index0 }}'>
+				{{cube}}
+			</div>
+		{% endfor %}
+	</div>
+	</div>
+</div>
+<script type="text/javascript">
+{%for cube in cubesLeft%}
+	new Draggy('leftcube{{ loop.index0 }}',{bindTo: 'content'});
+{% endfor %}
+{%for cube in cubesRight%}
+	new Draggy('rightcube{{ loop.index0 }}',{bindTo: 'content'});
+{% endfor %}
+</script>
+</body>
+</html>

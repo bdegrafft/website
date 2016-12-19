@@ -1,0 +1,121 @@
+body,html {
+  margin:0px;
+  padding:0px;
+  background-color: #455a64;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-weight: 300;
+}
+
+div.leftcol
+{
+			float:left;
+			width:46%;
+      margin-right: 5%;
+      margin-left: 2%;
+}
+div.rightcol
+{
+			float:right;
+			width:46%;
+      margin-right: 2%;
+      margin-left: 5%;
+}
+
+div.content
+{
+  display:flex;
+	margin-left:auto;
+	margin-right:auto;
+  padding-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 15px;
+	width:90%;
+	background-color: #607d8b;
+	border-radius: 50px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+
+img{
+  margin:auto;
+  display: block;
+  width: 10%;
+  padding-bottom: 25px;
+}
+
+
+h1
+	{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 70px;
+    font-size: 40pt;
+    text-align: center;
+    color: #eceff1;
+
+	}
+
+div.cube
+	{
+		border-radius:50px;
+		text-align:center;
+		margin-bottom:10px;
+		padding:10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#eceff1;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+	}
+  div.cube:hover
+  	{    transform: rotate(-1deg);
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+
+div.cube h3
+	{
+    font-family: 'Roboto', sans-serif;
+		padding: 3px;
+		border-radius:5px 5px 0px 0px;
+		text-align:left;
+		margin-bottom:0px;
+		margin-top:0px;
+	}
+div.cube p
+	{
+		margin-top:0px;
+	}
+nav ul {
+    font-family: 'Roboto', sans-serif;
+    top:0px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #455a64;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    z-index:99;
+    opacity: 0.9;
+
+}
+
+nav li {
+    float:left;
+
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav li a:hover {
+    background-color: #7986cb;
+    transition:.5s;
+}
